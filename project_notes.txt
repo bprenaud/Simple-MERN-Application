@@ -1,0 +1,38 @@
+*** READ.md from brad traversy's github must be applied ***
+
+1. State taken from redux store.
+2. mapStateToProps takes that state and maps them to props.
+3. Those props are passed class componenet 
+4. willReceiveProps maps the props back to the state of the component.
+
+Axios appends to the front of any URL called with 'proxy' setting in package.json
+    currently it is set to "http://localhost:5000"
+
+*remember scripts. Concurrently pkg used to run script "client-install"
+
+ensure secret JWT key is secure ./config/keys.js.secretOrKey
+
+
+package.json scripts "refresh" runs nodemod to enable automatic refresh of the server while making changes
+to the file rather than stopping and starting the node server every time to see the changes. 
+
+users.js could be called auth.js as well. All authentication, email, login connections and authorization
+in this file.
+
+Router in api files applies the end of the uri '/test' to app.get uri '/api/users' '/api/profile' and so on in
+in web browser URL
+
+
+When creating new user in mongoose with a model, you assing a var with "new User({key:value})"
+User.findOne({ email: req.body.email })
+        .then(user => {
+            if (user) {
+                return res.status(400).json({ email: "Email already exists." });
+            } else {
+                const newUser = new User();
+            }
+        })
+
+**Using react-router-dom v5 due to the use of withRouter which is deprecated in react-router-dom v6. Created function withRouter.js using
+useNavigate with a function inside, Wrapper, that returns the component, its props and redirect with navigate().
+
